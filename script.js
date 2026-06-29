@@ -215,3 +215,18 @@
   });
 
 })();
+
+const map = L.map('map').setView([35.678815,  51.446856], 13);
+
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+  attribution: '&copy; OpenStreetMap contributors'
+}).addTo(map);
+
+L.marker([35.678815,  51.446856]).addTo(map)
+  .bindPopup("Double Zero Coffee ☕");
+
+setTimeout(() => {
+  map.invalidateSize();
+}, 200);
+map.setZoom(17);
+  // standard_night dreamy

@@ -58,6 +58,8 @@
     ]
   }
   </script>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 </head>
 <body class="is-loading">
 
@@ -126,7 +128,7 @@
       <div class="container about__grid">
         <div class="about__visual fade-up" data-delay="0">
           <div class="about__image-wrap">
-            <img src="assets/hero.jpg" alt="دانه قهوه تخصصی و دم‌آوری حرفه‌ای" class="about__image" width="600" height="750" loading="lazy">
+            <img src="assets/hero.png" alt="دانه قهوه تخصصی و دم‌آوری حرفه‌ای" class="about__image" width="600" height="750" loading="lazy">
           </div>
         </div>
         <div class="about__content fade-up" data-delay="1">
@@ -151,10 +153,93 @@
         </div>
       </div>
     </section>
+    <section id="menu" class="menu-section">
+      <div class="container">
+        
+        <div class="menu-header">
+          <h2>Our Menu</h2>
+          <p>Specialty coffee crafted with precision</p>
+        </div>
 
-    <!-- ============================================
+        <div class="menu-grid">
+
+          <!-- Coffee -->
+          <div class="menu-category">
+            <h3>Coffee</h3>
+
+            <div class="menu-item">
+              <div>
+                <h4>Espresso</h4>
+                <p>Rich and bold single shot</p>
+              </div>
+              <span>$3.50</span>
+            </div>
+
+            <div class="menu-item">
+              <div>
+                <h4>Americano</h4>
+                <p>Smooth espresso with hot water</p>
+              </div>
+              <span>$4.00</span>
+            </div>
+
+          </div>
+
+          <!-- Milk Based -->
+          <div class="menu-category">
+            <h3>Milk Based</h3>
+
+            <div class="menu-item">
+              <div>
+                <h4>Latte</h4>
+                <p>Espresso with steamed milk</p>
+              </div>
+              <span>$4.50</span>
+            </div>
+
+            <div class="menu-item">
+              <div>
+                <h4>Cappuccino</h4>
+                <p>Foamy and balanced classic</p>
+              </div>
+              <span>$4.50</span>
+            </div>
+
+          </div>
+
+          <!-- Cold Drinks -->
+          <div class="menu-category">
+            <h3>Cold Drinks</h3>
+
+            <div class="menu-item">
+              <div>
+                <h4>Iced Latte</h4>
+                <p>Chilled espresso with milk</p>
+              </div>
+              <span>$5.00</span>
+            </div>
+
+            <div class="menu-item">
+              <div>
+                <h4>Cold Brew</h4>
+                <p>Slow-steeped smooth coffee</p>
+              </div>
+              <span>$5.50</span>
+            </div>
+
+          </div>
+
+        </div>
+
+        <div class="menu-cta">
+          <a href="#contact" class="menu-button">Visit Us</a>
+        </div>
+
+      </div>
+    </section>
+    <!--  ============================================
          محصولات — به زودی
-         ============================================ -->
+         ============================================ 
     <section class="coming-soon section section--alt" id="products" aria-labelledby="products-heading">
       <div class="container">
         <div class="section__header fade-up">
@@ -186,11 +271,11 @@
           </article>
         </div>
       </div>
-    </section>
+    </section> -->
 
     <!-- ============================================
          گالری
-         ============================================ -->
+         ============================================ 
     <section class="gallery section" id="gallery" aria-labelledby="gallery-heading">
       <div class="container">
         <div class="section__header fade-up">
@@ -217,7 +302,7 @@
         </div>
       </div>
     </section>
-
+    -->
     <!-- ============================================
          شبکه‌های اجتماعی
          ============================================ -->
@@ -268,14 +353,15 @@
         </div>
         <div class="location__grid fade-up">
           <div class="location__map-wrap">
-            <iframe
+            <div id="map"></div>
+            <!-- <iframe
               class="location__map"
               title="موقعیت دابل زیرو کافی روی نقشه"
               src="https://maps.google.com/maps?q=Tehran%2C+Iran&t=&z=14&ie=UTF8&iwloc=&output=embed"
               loading="lazy"
               referrerpolicy="no-referrer-when-downgrade"
               allowfullscreen>
-            </iframe>
+            </iframe> -->
           </div>
           <div class="location__info">
             <div class="location__item">
