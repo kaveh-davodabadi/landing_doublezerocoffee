@@ -230,3 +230,82 @@ setTimeout(() => {
 }, 200);
 map.setZoom(17);
   // standard_night dreamy
+
+
+  // menu section
+  const menuData = {
+  "hot-coffee": [
+    {
+      name: "اسپرسو دابل",
+      price: "120,000 تومان",
+      img: "images/espresso.jpg",
+      ingredients: "قهوه عربیکا، رست دارک"
+    },
+    {
+      name: "لاته",
+      price: "140,000 تومان",
+      img: "images/latte.jpg",
+      ingredients: "اسپرسو، شیر بخار داده شده"
+    }
+  ],
+
+  "hot-noncoffee": [
+    {
+      name: "هات چاکلت",
+      price: "130,000 تومان",
+      img: "images/hotchocolate.jpg",
+      ingredients: "شکلات تلخ، شیر، خامه"
+    }
+  ],
+
+  "cold-coffee": [
+    {
+      name: "آیس لاته",
+      price: "150,000 تومان",
+      img: "images/icedlatte.jpg",
+      ingredients: "اسپرسو، شیر سرد، یخ"
+    }
+  ],
+
+  "cold-noncoffee": [
+    {
+      name: "لیموناد اسپارکل",
+      price: "110,000 تومان",
+      img: "images/lemonade.jpg",
+      ingredients: "لیمو تازه، سودا، نعنا"
+    }
+  ]
+};
+
+const menuContainer = document.getElementById("menu-items");
+const tabs = document.querySelectorAll(".tab");
+
+function renderMenu(category){
+  menuContainer.innerHTML = "";
+
+  menuData[category].forEach(item => {
+    menuContainer.innerHTML += `
+      <div class="card">
+        <img src="${item.img}" alt="${item.name}">
+        <div class="card-body">
+          <div class="card-title">${item.name}</div>
+          <div class="card-price">${item.price}</div>
+          <div class="card-ingredients">${item.ingredients}</div>
+        </div>
+      </div>
+    `;
+  });
+}
+
+// default
+renderMenu("hot-coffee");
+
+tabs.forEach(tab => {
+  tab.addEventListener("click", () => {
+
+    tabs.forEach(t => t.classList.remove("active"));
+    tab.classList.add("active");
+
+    renderMenu(tab.dataset.category);
+  });
+});
